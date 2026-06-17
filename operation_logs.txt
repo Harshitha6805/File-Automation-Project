@@ -1,0 +1,4 @@
+2026-06-17 10:29:58,719 - Error: [WinError 3] The system cannot find the path specified: 'Text Files'
+2026-06-17 10:36:57,473 - image.jpg moved to Images
+2026-06-17 10:36:57,475 - report.pdf moved to Documents
+2026-06-17 10:36:57,477 - sample.txt moved to Documents
