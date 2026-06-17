@@ -2,3 +2,7 @@
 2026-06-17 10:36:57,473 - image.jpg moved to Images
 2026-06-17 10:36:57,475 - report.pdf moved to Documents
 2026-06-17 10:36:57,477 - sample.txt moved to Documents
+2026-06-17 12:01:45,953 - Error: Destination path 'Documents\report.pdf' already exists
+2026-06-17 12:03:49,163 - newiamge.jpg moved to Images
+2026-06-17 12:03:49,163 - newreport.pdf moved to Documents
+2026-06-17 12:03:49,170 - newsample.txt moved to Documents
