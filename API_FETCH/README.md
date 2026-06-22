@@ -1,85 +1,95 @@
-import requests
+# File Automation and API Data Fetch Project
+
+## Overview
+
+This project contains two Python-based tasks:
+
+1. File Automation System
+2. API Data Fetching System
+
+Both tasks demonstrate automation, data handling, and Python programming skills.
+
+---
+
+# Task 1: File Automation Project
+
+## Objective
+
+To automate file organization by sorting files into different folders based on their file extensions.
+
+## Features
+
+- Automatically creates folders
+- Identifies file types
+- Moves files into appropriate folders
+- Generates operation logs
+
+## Technologies Used
+
+- Python
+- OS Module
+- Shutil Module
+
+## Output
+
+Files are automatically organized into:
+
+- Documents
+- Images
+- Other folders
+
+Operation details are stored in:
+
+operation_logs.txt
 
 
-# Fetch API data
-def fetch_users():
-    url = "https://jsonplaceholder.typicode.com/users"
+---
 
-    response = requests.get(url)
+# Task 2: API Data Fetching Project
 
-    if response.status_code == 200:
-        return response.json()
-    else:
-        print("Failed to fetch API data")
-        return []
+## Objective
 
+To fetch data from an API using Python Requests, parse JSON responses, display data, and implement filtering functionality.
 
-# Display all users
-def display_users(users):
-    print("\n===== USER DETAILS =====")
+## API Used
 
-    for user in users:
-        print("ID:", user["id"])
-        print("Name:", user["name"])
-        print("Email:", user["email"])
-        print("City:", user["address"]["city"])
-        print("------------------------")
+JSONPlaceholder API
+
+https://jsonplaceholder.typicode.com/users
 
 
-# Search user by name
-def search_user(users):
-    keyword = input("\nEnter name to search: ")
+## Features
 
-    print("\n===== SEARCH RESULT =====")
-
-    found = False
-
-    for user in users:
-        if keyword.lower() in user["name"].lower():
-            print("Name:", user["name"])
-            print("Email:", user["email"])
-            print("City:", user["address"]["city"])
-            found = True
-
-    if not found:
-        print("No matching user found")
+- Fetch API data using Requests module
+- Parse JSON response
+- Display user information
+- Filter users based on city
 
 
-# Filter users by city
-def filter_city(users):
-    city = input("\nEnter city to filter: ")
+## Technologies Used
 
-    print("\n===== FILTER RESULT =====")
-
-    found = False
-
-    for user in users:
-        if city.lower() == user["address"]["city"].lower():
-            print("Name:", user["name"])
-            print("Email:", user["email"])
-            found = True
-
-    if not found:
-        print("No users found in this city")
+- Python
+- Requests Library
+- JSON
 
 
-# Main Program
-def main():
+## Execution
 
-    print("Fetching API Data...")
+Install required library:
 
-    users = fetch_users()
-
-    if users:
-        display_users(users)
-
-        search_user(users)
-
-        filter_city(users)
-
-    else:
-        print("No data available")
+pip install requests
 
 
-if __name__ == "__main__":
-    main()
+Run the program:
+
+python task2.py
+
+
+## Output
+
+The application successfully retrieves user data and allows users to filter records.
+
+
+---
+
+# Project Structure
